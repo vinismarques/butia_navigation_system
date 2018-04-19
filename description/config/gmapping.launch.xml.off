@@ -1,0 +1,10 @@
+<!-- 
+    ROS Simultaneous Localization and Mapping stack
+-->
+<launch>
+
+  <node pkg="gmapping" type="slam_gmapping" respawn="false" name="gmapping" output="screen">
+
+  </node>
+  
+</launch>

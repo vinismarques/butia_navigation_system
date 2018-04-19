@@ -18,7 +18,6 @@
         <arg name="world" default="myworld.world" />
   -->
   <arg name="world" default="$(find amr_robots_gazebo)/worlds/playground.world" />
-  <arg name="map" default="$(find amr_robots_gazebo)/maps/playground.yaml" />
 
   <!-- Set command arguments -->
 
@@ -47,10 +46,6 @@
   </group>
 
 
-  <!-- Start map_server -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)"/>
-
-
   <!-- Spawn robot -->
   <arg name="urdf" default="$(find amr_robots_description)/urdf/pioneer3at.urdf" />
   <arg name="x" default="0" />
@@ -65,20 +60,17 @@
   </include>
 
 
-  <!-- Localization -->
-  <arg name="initial_pose_x" default="0.0"/>
-  <arg name="initial_pose_y" default="0.0"/>
-  <arg name="initial_pose_a" default="0.0"/>
-  <arg name="custom_amcl_launch_file" default="$(find amr_robots_description)/config/amcl.launch.xml"/> 
+  <!-- Gmapping -->
+  <arg name="custom_gmapping_launch_file" default="$(find amr_robots_description)/config/gmapping.launch.xml"/>
 
-  <include file="$(arg custom_amcl_launch_file)">
-    <arg name="initial_pose_x" value="$(arg initial_pose_x)"/>
-    <arg name="initial_pose_y" value="$(arg initial_pose_y)"/>
-    <arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
-  </include>
-
+  <include file="$(arg custom_gmapping_launch_file)" />
+  
 
   <!-- Move base -->
   <include file="$(find amr_robots_description)/config/move_base.launch.xml"/>
+
+
+  <!-- RVIZ to view the visualization -->
+  <node name="RVIZ" pkg="rviz" type="rviz" args=" -d $(find amr_robots_description)/param/p3at_navigate.rviz" />
 
 </launch>
