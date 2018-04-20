@@ -17,8 +17,9 @@
        Or create a new launch file that uses that world here instead:
         <arg name="world" default="myworld.world" />
   -->
-  <!-- 
-    <arg name="world" default="$(find amr_robots_gazebo)/worlds/playground.world" /> 
+  <!-- Choose one world for Gazebo to load
+    <arg name="world" default="$(find amr_robots_gazebo)/worlds/playground.world" />
+    <arg name="world" default="worlds/willowgarage.world" />
   -->
   <arg name="world" default="worlds/willowgarage.world" />
 
