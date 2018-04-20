@@ -17,7 +17,10 @@
        Or create a new launch file that uses that world here instead:
         <arg name="world" default="myworld.world" />
   -->
-  <arg name="world" default="$(find amr_robots_gazebo)/worlds/playground.world" />
+  <!-- 
+    <arg name="world" default="$(find amr_robots_gazebo)/worlds/playground.world" /> 
+  -->
+  <arg name="world" default="worlds/willowgarage.world" />
 
   <!-- Set command arguments -->
 
@@ -64,7 +67,7 @@
   <arg name="custom_gmapping_launch_file" default="$(find amr_robots_description)/config/gmapping.launch.xml"/>
 
   <include file="$(arg custom_gmapping_launch_file)" />
-  
+
 
   <!-- Move base -->
   <include file="$(find amr_robots_description)/config/move_base.launch.xml"/>
