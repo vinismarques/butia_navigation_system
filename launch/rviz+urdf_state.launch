@@ -1,5 +1,5 @@
 <launch>
-	<arg name="urdf" />
+	<arg name="urdf" default="pioneer3at.urdf" />
 	<arg name="joint_state_gui" default="true" />
 	<param name="robot_description" textfile="$(find amr_robots_description)/urdf/$(arg urdf)" />
 	<param name="use_gui" value="$(arg joint_state_gui)"/>
