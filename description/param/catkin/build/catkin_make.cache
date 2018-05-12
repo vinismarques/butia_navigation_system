@@ -1,2 +1,0 @@
-
--DCATKIN_DEVEL_PREFIX=/home/vinicius/at_home_ws/src/pioneer-3at/description/param/catkin/devel -DCMAKE_INSTALL_PREFIX=/home/vinicius/at_home_ws/src/pioneer-3at/description/param/catkin/install -G Unix Makefiles
