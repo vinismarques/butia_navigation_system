@@ -9,17 +9,17 @@
   <arg name="odom_topic" default="odom" />
   <arg name="laser_topic" default="scan" />
   <arg name="cmd_vel_topic" default="cmd_vel" />
-  <arg name="custom_param_file" default="$(find amr_robots_description)/param/dummy.yaml"/>
+  <arg name="custom_param_file" default="$(find amr_robots_description)/config/param/dummy.yaml"/>
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    <rosparam file="$(find amr_robots_description)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find amr_robots_description)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />   
-    <rosparam file="$(find amr_robots_description)/param/local_costmap_params.yaml" command="load" />   
-    <rosparam file="$(find amr_robots_description)/param/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find amr_robots_description)/param/dwa_local_planner_params.yaml" command="load" />
-    <rosparam file="$(find amr_robots_description)/param/move_base_params.yaml" command="load" />
-    <rosparam file="$(find amr_robots_description)/param/global_planner_params.yaml" command="load" />
-    <rosparam file="$(find amr_robots_description)/param/navfn_global_planner_params.yaml" command="load" />
+    <rosparam file="$(find amr_robots_description)/config/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find amr_robots_description)/config/param/costmap_common_params.yaml" command="load" ns="local_costmap" />   
+    <rosparam file="$(find amr_robots_description)/config/param/local_costmap_params.yaml" command="load" />   
+    <rosparam file="$(find amr_robots_description)/config/param/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find amr_robots_description)/config/param/dwa_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find amr_robots_description)/config/param/move_base_params.yaml" command="load" />
+    <rosparam file="$(find amr_robots_description)/config/param/global_planner_params.yaml" command="load" />
+    <rosparam file="$(find amr_robots_description)/config/param/navfn_global_planner_params.yaml" command="load" />
     <!-- external params file that could be loaded into the move_base namespace -->
     <rosparam file="$(arg custom_param_file)" command="load" />
     

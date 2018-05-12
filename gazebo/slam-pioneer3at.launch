@@ -82,6 +82,6 @@
 
 
   <!-- RVIZ to view the visualization -->
-  <node name="RVIZ" pkg="rviz" type="rviz" args=" -d $(find amr_robots_description)/param/p3at_navigate.rviz" required="true" />
-
+  <node name="RVIZ" pkg="rviz" type="rviz" args=" -d $(find amr_robots_gazebo)/navigate-pioneer3at.rviz" required="true" />
+  
 </launch>
