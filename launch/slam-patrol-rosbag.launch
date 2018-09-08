@@ -9,7 +9,7 @@
   <!-- <param name="use_gui" value="$(arg joint_state_gui)"/> -->
   <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
-  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find amr_robots_launchfiles)/slam-pioneer3at.rviz" required="true" /> -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find amr_robots_launchfiles)/slam-patrol.rviz" required="true" />
   
   <!-- Launches laser node -->
   <!-- <include file="$(find amr_robots_description)/config/urg.launch.xml"/> -->
@@ -18,7 +18,13 @@
   <!-- <include file="$(find amr_robots_description)/config/rosaria.launch.xml"/> -->
 
   <!-- Gmapping -->
-  <include file="$(find amr_robots_description)/config/gmapping.launch.xml" />
+  <!-- <include file="$(find amr_robots_description)/config/gmapping.launch.xml" /> -->
+  <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
+    <param name="xmin" value="-1.0"/>
+    <param name="ymin" value="-1.0"/>
+    <param name="xmax" value="1.0"/>
+    <param name="ymax" value="1.0"/>
+  </node>
 
   <!-- Move base -->
   <!-- <arg name="cmd_vel" default="/RosAria/cmd_vel"/>
