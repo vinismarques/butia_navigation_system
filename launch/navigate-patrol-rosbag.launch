@@ -1,50 +1,19 @@
 <?xml version="1.0" ?>
 <launch>
   <param name ="/use_sim_time" value="true"/>
-  
+
   <!-- Launches rviz with the robot model -->
   <arg name="urdf" default="pioneer3at.urdf" />
-  <!-- <arg name="joint_state_gui" default="true" /> -->
   <param name="robot_description" textfile="$(find amr_robots_description)/urdf/$(arg urdf)" />
-  <!-- <param name="use_gui" value="$(arg joint_state_gui)"/> -->
   <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
-  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find amr_robots_launchfiles)/slam-patrol.rviz" required="true" /> -->
-  
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find amr_robots_launchfiles)/navigate-patrol.rviz" required="true" />
+
   <!-- Start map_server -->
   <arg name="map" default="$(find amr_robots_gazebo)/maps/c3-segundo-andar-2.yaml" />
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)" output="screen" />
 
-
-
-  <!-- Launches laser node -->
-  <!-- <include file="$(find amr_robots_description)/config/urg.launch.xml"/> -->
-
-  <!-- Launches rosaria -->
-  <!-- <include file="$(find amr_robots_description)/config/rosaria.launch.xml"/> -->
-
-  <!-- Gmapping -->
-  <!-- <include file="$(find amr_robots_description)/config/gmapping.launch.xml" /> -->
-
   <!-- Localization -->
-  <arg name="initial_pose_x" default="0.0"/>
-  <arg name="initial_pose_y" default="0.0"/>
-  <arg name="initial_pose_a" default="0.0"/>
-  <arg name="custom_amcl_launch_file" default="$(find amr_robots_description)/config/amcl.launch.xml"/> 
-
-  <include file="$(arg custom_amcl_launch_file)">
-    <arg name="initial_pose_x" value="$(arg initial_pose_x)"/>
-    <arg name="initial_pose_y" value="$(arg initial_pose_y)"/>
-    <arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
-  </include>
-
-  <!-- Move base -->
-  <!-- <arg name="cmd_vel" default="/RosAria/cmd_vel"/>
-  <arg name="odom" default="/RosAria/pose"/> -->
-  
-  <!-- <include file="$(find amr_robots_description)/config/move_base.launch.xml">
-    <arg name="cmd_vel_topic" value="$(arg cmd_vel)"/>
-    <arg name="odom_topic" value="$(arg odom)"/>
-  </include> -->
+  <include file="$(find amr_robots_description)/config/amcl.launch.xml" />
 
 </launch>

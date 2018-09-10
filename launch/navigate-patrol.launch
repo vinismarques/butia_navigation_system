@@ -8,23 +8,27 @@
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen" />
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find amr_robots_launchfiles)/slam-pioneer3at.rviz" required="true" />
-  
+
   <!-- Launches laser node -->
   <include file="$(find amr_robots_description)/config/urg.launch.xml"/>
 
   <!-- Launches rosaria -->
   <!-- <include file="$(find amr_robots_description)/config/rosaria.launch.xml"/> -->
 
+  <!-- Localization -->
+  <include file="$(find amr_robots_description)/config/amcl.launch.xml" />
+
+
   <!-- Gmapping -->
-  <include file="$(find amr_robots_description)/config/gmapping.launch.xml" />
+  <!-- <include file="$(find amr_robots_description)/config/gmapping.launch.xml" /> -->
 
   <!-- Move base -->
-  <arg name="cmd_vel" default="/RosAria/cmd_vel"/>
+  <!-- <arg name="cmd_vel" default="/RosAria/cmd_vel"/>
   <arg name="odom" default="/RosAria/pose"/>
-  
+
   <include file="$(find amr_robots_description)/config/move_base.launch.xml">
     <arg name="cmd_vel_topic" value="$(arg cmd_vel)"/>
     <arg name="odom_topic" value="$(arg odom)"/>
-  </include>
+  </include> -->
 
 </launch>

@@ -16,26 +16,15 @@
   <!-- <include file="$(find amr_robots_description)/config/rosaria.launch.xml"/> -->
 
   <!-- Gmapping -->
-  <!-- <include file="$(find amr_robots_description)/config/gmapping.launch.xml" /> -->
-  <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
-    <param name="xmin" value="-1.0"/>
-    <param name="ymin" value="-1.0"/>
-    <param name="xmax" value="1.0"/>
-    <param name="ymax" value="1.0"/>
-
-    <param name="lskip" value="10"/>
-    <param name="linearUpdate" value="0.1"/>
-    <param name="angularUpdate" value="0.1"/>
-    
-  </node>
+  <include file="$(find amr_robots_description)/config/gmapping.launch.xml" />
 
   <!-- Move base -->
-  <arg name="cmd_vel" default="/RosAria/cmd_vel"/>
+  <!-- <arg name="cmd_vel" default="/RosAria/cmd_vel"/>
   <arg name="odom" default="/RosAria/pose"/>
   
   <include file="$(find amr_robots_description)/config/move_base.launch.xml">
     <arg name="cmd_vel_topic" value="$(arg cmd_vel)"/>
     <arg name="odom_topic" value="$(arg odom)"/>
-  </include>
+  </include> -->
 
 </launch>
