@@ -9,6 +9,10 @@
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find amr_robots_launchfiles)/slam-pioneer3at.rviz" required="true" />
 
+  <!-- Start map_server -->
+  <arg name="map" default="$(find amr_robots_gazebo)/maps/c3-segundo-andar-2.yaml" />
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)" output="screen" />
+
   <!-- Launches laser node -->
   <include file="$(find amr_robots_description)/config/urg.launch.xml"/>
 
@@ -23,12 +27,12 @@
   <!-- <include file="$(find amr_robots_description)/config/gmapping.launch.xml" /> -->
 
   <!-- Move base -->
-  <!-- <arg name="cmd_vel" default="/RosAria/cmd_vel"/>
+  <arg name="cmd_vel" default="/RosAria/cmd_vel"/>
   <arg name="odom" default="/RosAria/pose"/>
 
   <include file="$(find amr_robots_description)/config/move_base.launch.xml">
     <arg name="cmd_vel_topic" value="$(arg cmd_vel)"/>
     <arg name="odom_topic" value="$(arg odom)"/>
-  </include> -->
+  </include>
 
 </launch>
