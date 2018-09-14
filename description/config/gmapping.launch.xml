@@ -9,6 +9,7 @@
     <param name="lskip" value="10"/>
     <param name="linearUpdate" value="0.1"/>
     <param name="angularUpdate" value="0.1"/>
+    <!-- <param name="temporalUpdate" value="3"/> -->
 
     <!-- <remap from="scan" to="$(arg scan_topic)"/> -->
   </node>
