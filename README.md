@@ -18,7 +18,7 @@ This repository contains a collection of ROS (Robot Operating System) packages n
   - /initialpose ([geometry_msgs/PoseWithCovarianceStamped](http://docs.ros.org/api/geometry_msgs/html/msg/PoseWithCovarianceStamped.html)):
         Useful for setting the start pose of the robot. Used by `amcl`.
   - /map ([nav_msgs/OccupancyGrid](http://docs.ros.org/api/nav_msgs/html/msg/OccupancyGrid.html)):
-        Latched topic that contains information about the occupancy grid. Usually created by a SLAM mapping service and managed by the `map_server`. 
+        A latched topic (meaning that the data is sent once to each new subscriber) that contains information about the occupancy grid. Usually created by a SLAM mapping service and saved to disk by the `map_server`. 
   - /move_base/goal ([move_base_msgs/MoveBaseActionGoal](http://docs.ros.org/api/move_base_msgs/html/msg/MoveBaseActionGoal.html)):
             A goal for `move_base` to pursue in the world. Can be used if tracking status is needed.
   - /move_base_simple/goal ([geometry_msgs/PoseStamped](http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html)):
