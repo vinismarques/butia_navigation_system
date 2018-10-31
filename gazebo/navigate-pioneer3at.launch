@@ -18,8 +18,8 @@
     <arg name="world" default="$(find amr_robots_gazebo)/worlds/playground.world" />
     <arg name="map" default="$(find amr_robots_gazebo)/maps/playground.yaml" />
   -->
-  <arg name="world" default="$(find amr_robots_gazebo)/worlds/playground.world" />
-  <arg name="map" default="$(find amr_robots_gazebo)/maps/playground.yaml" />
+  <arg name="world" default="worlds/willowgarage.world" />
+  <arg name="map" default="$(find amr_robots_gazebo)/maps/willow.yaml" />
 
   <!-- Set command arguments -->
   <group if="$(arg use_sim_time)">
