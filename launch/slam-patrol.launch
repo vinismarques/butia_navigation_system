@@ -13,7 +13,7 @@
   <include file="$(find amr_robots_description)/config/urg.launch.xml"/>
 
   <!-- Launches rosaria -->
-  <!-- <include file="$(find amr_robots_description)/config/rosaria.launch.xml"/> -->
+  <include file="$(find amr_robots_description)/config/rosaria.launch.xml"/>
 
   <!-- Gmapping -->
   <include file="$(find amr_robots_description)/config/gmapping.launch.xml" />
