@@ -16,11 +16,11 @@
     <inertial>
       <mass value="0.1"/>
       <!-- P3AT 18.6kg plus three batteries @ 2.4kg each  minus four wheels @ 1.4 kg ea and top plate @ 0.1 kg-->
-      <origin xyz="-0.1 0 0.177"/>
+      <origin xyz="-0.1 0 0.189"/>
       <inertia ixx="0.3338" ixy="0.0" ixz="0.0" iyy="0.4783" iyz="0.0" izz="0.3338"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0.177"/>
+      <origin rpy="0 0 0" xyz="0 0 0.189"/>
       <geometry name="pioneer_geom">
         <mesh filename="package://amr_robots_description/meshes/p3at_meshes/chassis.stl"/>
       </geometry>
@@ -29,7 +29,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0.177"/>
+      <origin rpy="0 0 0" xyz="0 0 0.189"/>
       <geometry>
         <mesh filename="package://amr_robots_description/meshes/p3at_meshes/chassis.stl"/>
       </geometry>
@@ -59,7 +59,7 @@
     <material>Gazebo/Black</material>
   </gazebo>
   <joint name="base_top_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0.003 0 0.274"/>
+    <origin rpy="0 0 0" xyz="0 0 0.378"/>
     <parent link="base_link"/>
     <child link="top_plate"/>
   </joint>
@@ -577,7 +577,7 @@
   </link>
   <joint name="hokuyo_joint" type="fixed">
     <!--<axis xyz="0 0 1" />-->
-    <origin rpy="0 0 0" xyz="0.08 0 0.31"/>
+    <origin rpy="0 0 0" xyz="0.25 0 0.31"/>
     <parent link="base_link"/>
     <child link="hokuyo_link"/>
   </joint>

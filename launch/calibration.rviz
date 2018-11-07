@@ -82,8 +82,6 @@ Visualization Manager:
           Value: true
         hokuyo_link:
           Value: true
-        map:
-          Value: true
         odom:
           Value: true
         p3at_back_left_axle:
@@ -104,47 +102,46 @@ Visualization Manager:
           Value: true
         top_plate:
           Value: true
-      Marker Scale: 1
+      Marker Scale: 0.200000003
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        map:
-          odom:
-            base_link:
-              back_sonar:
+        odom:
+          base_link:
+            back_sonar:
+              {}
+            front_sonar:
+              {}
+            hokuyo_link:
+              {}
+            p3at_back_left_axle:
+              p3at_back_left_hub:
                 {}
-              front_sonar:
+            p3at_back_right_axle:
+              p3at_back_right_hub:
                 {}
-              hokuyo_link:
+            p3at_front_left_axle:
+              p3at_front_left_hub:
                 {}
-              p3at_back_left_axle:
-                p3at_back_left_hub:
-                  {}
-              p3at_back_right_axle:
-                p3at_back_right_hub:
-                  {}
-              p3at_front_left_axle:
-                p3at_front_left_hub:
-                  {}
-              p3at_front_right_axle:
-                p3at_front_right_hub:
-                  {}
-              top_plate:
+            p3at_front_right_axle:
+              p3at_front_right_hub:
                 {}
+            top_plate:
+              {}
       Update Interval: 0
       Value: true
     - Alpha: 0.699999988
       Class: rviz/Map
       Color Scheme: map
       Draw Behind: false
-      Enabled: true
+      Enabled: false
       Name: Map
       Topic: /map
       Unreliable: false
       Use Timestamp: false
-      Value: true
+      Value: false
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
@@ -156,7 +153,7 @@ Visualization Manager:
       Class: rviz/LaserScan
       Color: 255; 255; 255
       Color Transformer: Intensity
-      Decay Time: 0
+      Decay Time: 60
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
@@ -179,27 +176,27 @@ Visualization Manager:
       Class: rviz/Map
       Color Scheme: map
       Draw Behind: false
-      Enabled: true
+      Enabled: false
       Name: Global Costmap
       Topic: /move_base/global_costmap/costmap
       Unreliable: false
       Use Timestamp: false
-      Value: true
+      Value: false
     - Alpha: 0.699999988
       Class: rviz/Map
       Color Scheme: map
       Draw Behind: false
-      Enabled: true
+      Enabled: false
       Name: Local Costmap
       Topic: /move_base/local_costmap/costmap
       Unreliable: false
       Use Timestamp: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -217,36 +214,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /move_base/NavfnROS/plan
       Unreliable: false
-      Value: true
-    - Alpha: 1
-      Arrow Length: 0.300000012
-      Axes Length: 0.300000012
-      Axes Radius: 0.00999999978
-      Class: rviz/PoseArray
-      Color: 255; 25; 0
-      Enabled: false
-      Head Length: 0.0700000003
-      Head Radius: 0.0299999993
-      Name: PoseArray
-      Shaft Length: 0.230000004
-      Shaft Radius: 0.00999999978
-      Shape: Arrow (Flat)
-      Topic: /particlecloud
-      Unreliable: false
       Value: false
-    - Alpha: 1
-      Class: rviz/Polygon
-      Color: 25; 255; 0
-      Enabled: true
-      Name: Polygon
-      Topic: /move_base/local_costmap/footprint
-      Unreliable: false
-      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: map
+    Fixed Frame: odom
     Frame Rate: 30
   Name: root
   Tools:
@@ -267,25 +240,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 7.24261045
+      Distance: 13.9302721
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.869055569
-        Y: -1.48745871
-        Z: 1.04978335
+        X: -0.361497998
+        Y: -0.348046005
+        Z: 1.04865003
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.56979632
+      Pitch: 1.18039763
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.22358465
+      Yaw: 3.11858392
     Saved: ~
 Window Geometry:
   Displays:
