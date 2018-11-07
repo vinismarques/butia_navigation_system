@@ -5,19 +5,19 @@
   <!-- <arg name="joint_state_gui" default="true" /> -->
   <param name="robot_description" textfile="$(find amr_robots_description)/urdf/$(arg urdf)" />
   <!-- <param name="use_gui" value="$(arg joint_state_gui)"/> -->
-  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen" />
+  <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen" /> -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find amr_robots_launchfiles)/slam-pioneer3at.rviz" required="true" />
 
   <!-- Start map_server -->
-  <arg name="map" default="$(find amr_robots_gazebo)/maps/c3-segundo-andar-2.yaml" />
+  <arg name="map" default="$(find amr_robots_gazebo)/maps/qg-2018110701.yaml" />
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)" output="screen" />
 
   <!-- Launches laser node -->
   <include file="$(find amr_robots_description)/config/urg.launch.xml"/>
 
   <!-- Launches rosaria -->
-  <!-- <include file="$(find amr_robots_description)/config/rosaria.launch.xml"/> -->
+  <include file="$(find amr_robots_description)/config/rosaria.launch.xml"/>
 
   <!-- Localization -->
   <include file="$(find amr_robots_description)/config/amcl.launch.xml" />
