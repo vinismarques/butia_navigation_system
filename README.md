@@ -18,13 +18,17 @@ This repository contains a collection of ROS (Robot Operating System) packages n
   - /initialpose ([geometry_msgs/PoseWithCovarianceStamped](http://docs.ros.org/api/geometry_msgs/html/msg/PoseWithCovarianceStamped.html)):
         Useful for setting the start pose of the robot. Used by `amcl`.
   - /map ([nav_msgs/OccupancyGrid](http://docs.ros.org/api/nav_msgs/html/msg/OccupancyGrid.html)):
-        A latched topic (meaning that the data is sent once to each new subscriber) that contains information about the occupancy grid. Usually created by a SLAM mapping service and saved to disk by the `map_server`. 
-  - /move_base/goal ([move_base_msgs/MoveBaseActionGoal](http://docs.ros.org/api/move_base_msgs/html/msg/MoveBaseActionGoal.html)):
-            A goal for `move_base` to pursue in the world. Can be used if tracking status is needed.
+        A latched topic (meaning that the data is sent once to each new subscriber) that contains information about the occupancy grid. Usually created by a SLAM mapping service and saved to disk by the `map_server`.
   - /move_base_simple/goal ([geometry_msgs/PoseStamped](http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html)):
         Provides a non-action interface to `move_base` for users that don't care about tracking the execution status of their goals. Useful for setting a goal through Rviz, for example. The `move_base` package subscribes to this topic and use it to set new goals.
+  - /move_base/goal ([move_base_msgs/MoveBaseActionGoal](http://docs.ros.org/api/move_base_msgs/html/msg/MoveBaseActionGoal.html)):
+        A goal for `move_base` to pursue in the world. Can be used if tracking status is needed.
+  - /move_base/cancel [actionlib_msgs/GoalID](http://docs.ros.org/api/actionlib_msgs/html/msg/GoalID.html)
+        A request to cancel a specific goal.
   - /move_base/status ([actionlib_msgs/GoalStatusArray](http://docs.ros.org/api/actionlib_msgs/html/msg/GoalStatusArray.html)): 
-            Provides status information on the goals that are sent to the `move_base` action. 
+        Provides status information on the goals that are sent to the `move_base` action. 
+  - /move_base/result [move_base_msgs/MoveBaseActionResult](http://docs.ros.org/api/move_base_msgs/html/msg/MoveBaseActionResult.html):
+        Publishes only the final status of the goal. Status code 3 means it was sucessful in reaching the goal, code 4 means it was aborted due to some failure.
   - /tf ([tf/tfMessage](http://docs.ros.org/api/tf/html/msg/tfMessage.html)):
         Contains coordinate frames for moving parts.
   - /tf_static ([tf/tfMessage](http://docs.ros.org/api/tf/html/msg/tfMessage.html)):
