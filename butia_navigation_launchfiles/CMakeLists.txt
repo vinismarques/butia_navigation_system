@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(amr_robots_launchfiles)
+project(butia_navigation_launchfiles)
 
 #install(DIRECTORY 
 #   launch 

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>butia_navigation_launchfiles</name>
+  <version>1.0.0</version>
+  <description>Launch files for use with rosaria and rosbag files</description>
+  <maintainer email="vinicius.marques@furg.br">Vinicius Marques</maintainer> 
+  <license>BSD</license>
+
+  <author email="vinicius.marques@furg.br">Vinicius Marques</author>
+  <author>Vinicius Marques</author>
+
+  <depend>roslaunch</depend>
+</package>

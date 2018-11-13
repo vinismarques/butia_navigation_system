@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>butia_navigation_description</name>
+  <version>1.0.0</version>
+  <description>Navigation stack configuration files and URDF file descriptions</description>
+  <maintainer email="vinicius.marques@furg.br">Vinicius Marques</maintainer> 
+  <license>BSD</license>
+
+  <author email="vinicius.marques@furg.br">Vinicius Marques</author>
+  <author>Vinicius Marques</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>sensor_msgs</depend>
+  <depend>urdf</depend>
+  <depend>std_msgs</depend>
+  <depend>move_base</depend>
+  <depend>geometry_msgs</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>amcl</depend>
+  <depend>map_server</depend>
+  <depend>dwa_local_planner</depend>
+  <depend>gmapping</depend>
+
+</package>

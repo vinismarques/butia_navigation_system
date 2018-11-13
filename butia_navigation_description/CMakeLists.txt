@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(amr_robots_description)
+project(butia_navigation_description)
 
 find_package(catkin REQUIRED COMPONENTS geometry_msgs sensor_msgs std_msgs robot_state_publisher urdf)
 
