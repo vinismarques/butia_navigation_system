@@ -32,25 +32,6 @@ found in ~/.gazebo/models, or installed on the system, or available from the
 gazebosim.world website will be listed in the "Models" list on the left panel in the
 Gazbeo client GUi.
 
-example-pioneer3at-world.launch 
--------------------------------
-An example roslaunch file that runs Gazebo with an 
-empty world (unless you specify a `world` argument), then
-spawns a P3AT robot.  (Currently no sensors.) 
-
-You can then move the robot by publishing to the `/cmd_vel` topic, either:
-1. Use rostopic
-2. Use rviz:
-	* Install `rviz_plugin_tutorials`:
-		* For ROS jade: `sudo apt-get install ros-jade-rviz-plugin-tutorials`
-		* For ROS indigo: `sudo apt-get install ros-indigo-rviz-plugin-tutorials`
-	* Run rviz
-	* Select Add Panel... from the Panels menu
-	* Select the teleop panel
-	* Enter `/cmd_vel` as the output topic of the teleop panel
-	* Drag within the telop panel
-
-
 spawn.launch
 ------------
 An example launch file for spawning simulated robots from urdf
@@ -63,38 +44,22 @@ are launched as well.
 
 e.g.:
 
-  roslaunch spawn.launch urdf:=../description/urdf/pioneer-lx.urdf.xacro name:=pioneer-lx
+  roslaunch spawn.launch urdf:=../description/urdf/pioneer3at.urdf.xacro name:=pioneer3at
 
-If not specified, defaults to pioneer3dx robot model.
+If not specified, defaults to pioneer3at robot model.
 
 Other example launch files default to other robot models:
 * `spawn-pioneer3at.launch`: Spawn a Pioneer 3-AT
-* `spawn-pioneer3dx.launch`: Spawn a Pioneer 3-DX
-* `spawn-pioneer-lx.launch`: Spawn a Pioneer LX
-etc.
-
-
-example-pioneer3at-terrainworld.launch and example-pioneer3at-moonworld.launch 
-------------------------------------------------------------------------------
-These roslaunch files run Gazebo
-in example environments defined by a heightmap.  For the moon enivironment to work you
-may need to copy the `apollo11_landing_site_1000x1000` model to your ~/.gazebo/models
-directory, especially for older versions of Gazebo.  Note that gravity is moon-scale
-in the moon environment, so behavior of the robot may be unusual.
-
 
 empty.world
 -----------
 This is just a copy of Gazebo's default "empty" world, containing only a plain
 ground plane.
 
-simple-ramp.world
------------------
-An example Gazebo world file.  Includes a few objects defined either in external
-model SDF files (see models directory), or defined in the world file but
-referencing 3D mesh model files from the models database.  You can specify  this
-in the `world` argument to some of the launch files, or you can use
-`example-simple-ramp-world.launch`.    (Use the "spawn" launch files described
-above to add robots to these worlds.)
+navigate-pioneer3at.launch
+--------------------------
+Simulate the navigation capabilities with the settings from `butia_navigation_description` using the Pioneer 3-AT. Either the Willow Garage World or Playground World can be used. Choose which one to use changing the "world" and "map" arguments in the launchfile.
 
-
+slam-pioneer3at.launch
+----------------------
+Simulate SLAM capabilites with the settings from `butia_navigation_description`. The argument "world" can be changed to select either playground.world or willowgarage.world.
