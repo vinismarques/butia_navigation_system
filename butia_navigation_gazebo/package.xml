@@ -9,7 +9,10 @@
   <author email="vinicius.marques@furg.br">Vinicius Marques</author>
   <author>Vinicius Marques</author>
 
-  <depend>gazebo_ros_pkgs</depend>
+  <depend>gazebo_dev</depend>
+  <depend>gazebo_msgs</depend>
+  <depend>gazebo_plugins</depend>
+  <depend>gazebo_ros</depend>
 
   <export>
     <gazebo_ros gazebo_model_path="${prefix}/models" />
