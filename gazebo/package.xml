@@ -1,13 +1,16 @@
-<package>
-  <name>amr_robots_gazebo</name>
+<?xml version="1.0"?>
+<package format="2">
+  <name>butia_navigation_gazebo</name>
   <version>1.0.0</version>
-  <description>Example gazebo world, model and launch files for simulating Adept MobileRobots/ActivMedia robots for use with ROS</description>
-  <maintainer email="reed.hedges@adept.com">Reed Hedges</maintainer> 
-  <url type="website">http://wiki.ros.org/Robots/Pioneer</url>
-  <author email="reed.hedges@adept.com">Reed Hedges</author>
-  <author>Adept MobileRobots</author>
+  <description>Gazebo worlds, maps, models and launch files for simulating robots for use with ROS</description>
+  <maintainer email="vinicius.marques@furg.br">Vinicius Marques</maintainer>
   <license>BSD</license>
-  <run_depend>gazebo_ros_pkgs</run_depend>
+
+  <author email="vinicius.marques@furg.br">Vinicius Marques</author>
+  <author>Vinicius Marques</author>
+
+  <depend>gazebo_ros_pkgs</depend>
+
   <export>
     <gazebo_ros gazebo_model_path="${prefix}/models" />
     <gazebo_ros gazebo_media_path="${prefix}/models" />

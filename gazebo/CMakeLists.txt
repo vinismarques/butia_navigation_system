@@ -1,1 +1,1 @@
-project(amr_robots_gazebo)
+project(butia_navigation_gazebo)
