@@ -12,7 +12,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://amr_robots_description/meshes/sensors/hokuyo.dae"/>
+          <mesh filename="package://butia_navigation_description/meshes/sensors/hokuyo.dae"/>
         </geometry>
       </visual>
       <inertial>

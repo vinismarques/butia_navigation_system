@@ -3,26 +3,26 @@
   <!-- Launches rviz with the robot model -->
   <arg name="urdf" default="pioneer3at.urdf" />
   <arg name="joint_state_gui" default="true" />
-  <param name="robot_description" textfile="$(find amr_robots_description)/urdf/$(arg urdf)" />
+  <param name="robot_description" textfile="$(find butia_navigation_description)/urdf/$(arg urdf)" />
   <!-- <param name="use_gui" value="$(arg joint_state_gui)"/> -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find amr_robots_launchfiles)/slam-pioneer3at.rviz" required="true" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_navigation_launchfiles)/slam-pioneer3at.rviz" required="true" />
   
   <!-- Launches laser node -->
-  <include file="$(find amr_robots_description)/config/urg.launch.xml"/>
+  <include file="$(find butia_navigation_description)/config/urg.launch.xml"/>
 
   <!-- Launches rosaria -->
-  <include file="$(find amr_robots_description)/config/rosaria.launch.xml"/>
+  <include file="$(find butia_navigation_description)/config/rosaria.launch.xml"/>
 
   <!-- Gmapping -->
-  <include file="$(find amr_robots_description)/config/gmapping.launch.xml" />
+  <include file="$(find butia_navigation_description)/config/gmapping.launch.xml" />
 
   <!-- Move base -->
   <arg name="cmd_vel" default="cmd_vel"/>
   <arg name="odom" default="odom"/>
   
-  <include file="$(find amr_robots_description)/config/move_base.launch.xml">
+  <include file="$(find butia_navigation_description)/config/move_base.launch.xml">
     <arg name="cmd_vel_topic" value="$(arg cmd_vel)"/>
     <arg name="odom_topic" value="$(arg odom)"/>
   </include>

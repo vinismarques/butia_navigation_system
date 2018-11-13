@@ -2,14 +2,14 @@
 <launch>
   <arg name="name" default="" />
   <arg name="ns" default="/$(arg name)" />
-  <arg name="urdf" default="$(find amr_robots_description)/urdf/pioneer3at.urdf" />
+  <arg name="urdf" default="$(find butia_navigation_description)/urdf/pioneer3at.urdf" />
   <arg name="x" default="0" />
   <arg name="y" default="0" />
   <arg name="z" default="0.5" />
   
   
   <group ns="$(arg ns)">
-    <include file="$(find amr_robots_gazebo)/spawn.launch">
+    <include file="$(find butia_navigation_gazebo)/spawn.launch">
       <arg name="urdf" value="$(arg urdf)" />
       <arg name="x" value="$(arg x)" />
       <arg name="y" value="$(arg y)" />
