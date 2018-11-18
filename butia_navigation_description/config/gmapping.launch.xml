@@ -10,7 +10,6 @@
     <param name="linearUpdate" value="0.1"/>
     <param name="angularUpdate" value="0.1"/>
     <!-- <param name="temporalUpdate" value="3"/> -->
-    <!-- <param name="maxUrange" value="4.0"/> -->
     <param name="maxRange" value="4.0"/> <!-- reduces random spikes -->
     <!-- <param name="minimumScore" value="50"/> -->
 
