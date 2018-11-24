@@ -7,11 +7,7 @@
     <param name="odom_alpha2" value="0.2"/>
     <param name="odom_alpha3" value="0.8"/>
     <param name="odom_alpha4" value="0.2"/>
-    <param name="laser_z_hit" value="0.5"/>
-    <param name="laser_z_short" value="0.05"/>
-    <param name="laser_z_rand" value="0.5"/>
     <param name="resample_interval" value="1"/>
-
 
     <!-- <remap from="scan" to="$(arg scan_topic)"/> -->
   </node>
