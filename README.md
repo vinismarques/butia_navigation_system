@@ -37,3 +37,6 @@ This repository contains a collection of ROS (Robot Operating System) packages n
         Laser scans to create the map from and to create the costmap. 
   - /cmd_vel ([geometry_msgs/Twist](http://docs.ros.org/api/geometry_msgs/html/msg/Twist.html)):
         Used to control the robot motors. Used internally by the nodes. Used by `move_base` and `teleop_twist_joy`.
+
+### Bagfiles
+Recorded bags can be found on [Google Drive](https://drive.google.com/drive/folders/1SaCmBkyTRnN6mYBaKE2m19mB6H5DNCoK)
