@@ -12,6 +12,9 @@ This repository contains a collection of ROS (Robot Operating System) packages n
         Provides an implementation of an action (see the actionlib package) that, given a goal in the world, will attempt to reach it with a mobile base. The move_base node links together a global and local planner to accomplish its global navigation task. It supports any global planner adhering to the nav_core::BaseGlobalPlanner interface specified in the nav_core package and any local planner adhering to the nav_core::BaseLocalPlanner interface specified in the nav_core package. The move_base node also maintains two costmaps, one for the global planner, and one for a local planner (see the costmap_2d package) that are used to accomplish navigation tasks.
   - [urg_node](http://wiki.ros.org/urg_node):
         Driver for Hokuyos laser range-finders.
+  - [sick_scan](http://wiki.ros.org/sick_scan):
+        Driver for SICK laser range-finders.
+ 
 
 ### Topics
 
