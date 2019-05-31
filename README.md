@@ -2,7 +2,7 @@
 
 This repository contains a collection of ROS (Robot Operating System) packages needed for Simultaneous Localization and Mapping (SLAM), navigating and also performing simulations.
 
-### Nodes
+#### Nodes
 
   - [gmapping](http://wiki.ros.org/gmapping):
         Provides laser-based SLAM (Simultaneous Localization and Mapping), as a ROS node called `slam_gmapping`. Using `slam_gmapping`, you can create a 2-D occupancy grid map (like a building floorplan) from laser and pose data collected by a mobile robot.
@@ -16,7 +16,7 @@ This repository contains a collection of ROS (Robot Operating System) packages n
         Driver for SICK laser range-finders.
  
 
-### Topics
+#### Topics
 
   - /initialpose ([geometry_msgs/PoseWithCovarianceStamped](http://docs.ros.org/api/geometry_msgs/html/msg/PoseWithCovarianceStamped.html)):
         Useful for setting the start pose of the robot. Used by `amcl`.
@@ -42,16 +42,16 @@ This repository contains a collection of ROS (Robot Operating System) packages n
         Used to control the robot motors. Used internally by the nodes. Used by `move_base` and `teleop_twist_joy`.
 
 ### API
-  ##  Services
-  - /RosAria/disable_motors
-      Disable all motors
-  - /RosAria/enable_motors
-      Enable all motors
-  - /global_localization
-      Used for robot to find his pose in global map
-  - /set_map
-      Define the map that move_base is going to use
-  ##  Topics
-  - /move_base/current_goal
-      Return the coordinates of the object
+  ####  Services
+  - /RosAria/disable_motors:
+      Disable all motors.
+  - /RosAria/enable_motors:
+      Enable all motors.
+  - /global_localization:
+      Used for robot to find his pose in global map.
+  - /set_map:
+      Define the map that move_base is going to use.
+  ####  Topics
+  - /move_base/current_goal:
+      Return the coordinates of the object.
       
