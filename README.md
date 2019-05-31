@@ -43,15 +43,15 @@ This repository contains a collection of ROS (Robot Operating System) packages n
 
 ### API
   ##  Services
-  -/RosAria/disable_motors
+  - /RosAria/disable_motors
       Disable all motors
-  -/RosAria/enable_motors
+  - /RosAria/enable_motors
       Enable all motors
-  -/global_localization
+  - /global_localization
       Used for robot to find his pose in global map
-  -/set_map
+  - /set_map
       Define the map that move_base is going to use
   ##  Topics
-  -/move_base/current_goal
+  - /move_base/current_goal
       Return the coordinates of the object
       
