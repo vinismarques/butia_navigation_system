@@ -40,3 +40,18 @@ This repository contains a collection of ROS (Robot Operating System) packages n
         Laser scans to create the map from and to create the costmap. 
   - /cmd_vel ([geometry_msgs/Twist](http://docs.ros.org/api/geometry_msgs/html/msg/Twist.html)):
         Used to control the robot motors. Used internally by the nodes. Used by `move_base` and `teleop_twist_joy`.
+
+### API
+  ##  Services
+  -/RosAria/disable_motors
+      Disable all motors
+  -/RosAria/enable_motors
+      Enable all motors
+  -/global_localization
+      Used for robot to find his pose in global map
+  -/set_map
+      Define the map that move_base is going to use
+  ##  Topics
+  -/move_base/current_goal
+      Return the coordinates of the object
+      
