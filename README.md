@@ -41,7 +41,7 @@ This repository contains a collection of ROS (Robot Operating System) packages n
   - /cmd_vel ([geometry_msgs/Twist](http://docs.ros.org/api/geometry_msgs/html/msg/Twist.html)):
         Used to control the robot motors. Used internally by the nodes. Used by `move_base` and `teleop_twist_joy`.
 
-### API
+## API
   ####  Services
   - /RosAria/disable_motors:
       Disable all motors.
