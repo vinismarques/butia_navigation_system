@@ -29,8 +29,8 @@ This repository contains a collection of ROS (Robot Operating System) packages n
 ##### Action Subscribed Topics        
   - /move_base/goal ([move_base_msgs/MoveBaseActionGoal](http://docs.ros.org/api/move_base_msgs/html/msg/MoveBaseActionGoal.html)):
         A goal for `move_base` to pursue in the world. Can be used if tracking status is needed.
-  - /move_base/current_goal ([geometry_msgs/PoseStamped] (http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html)):
-      Displays the goal pose that the navigation stack is attempting to achieve.
+  - /move_base/current_goal ([geometry_msgs/PoseStamped](http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html)):
+        Displays the goal pose that the navigation stack is attempting to achieve.
   - /move_base/cancel ([actionlib_msgs/GoalID](http://docs.ros.org/api/actionlib_msgs/html/msg/GoalID.html)):
         A request to cancel a specific goal.
   - /move_base/feedback ([move_base_msgs/MoveBaseActionFeedback](http://docs.ros.org/api/move_base_msgs/html/msg/MoveBaseActionFeedback.html)):
