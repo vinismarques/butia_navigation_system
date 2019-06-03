@@ -32,6 +32,11 @@ This repository contains a collection of ROS (Robot Operating System) packages n
         Provides status information on the goals that are sent to the `move_base` action. 
   - /move_base/result [move_base_msgs/MoveBaseActionResult](http://docs.ros.org/api/move_base_msgs/html/msg/MoveBaseActionResult.html):
         Publishes only the final status of the goal. Status code 3 means it was sucessful in reaching the goal, code 4 means it was aborted due to some failure.
+  - /make_plan ([nav_msgs/GetPlan](http://docs.ros.org/api/nav_msgs/html/srv/GetPlan.html)):
+        Allows an external user to ask for a plan to a given pose from move_base without causing move_base to execute that plan.         
+  - /clear_unknown_space ([std_srvs/Empty](http://docs.ros.org/api/std_srvs/html/srv/Empty.html)):
+        Allows an external user to tell move_base to clear unknown space in the area directly around the robot. This is useful when move_base has its costmaps stopped for a long period of time and then started again in a new location in the environment.
+  -
   - /tf ([tf/tfMessage](http://docs.ros.org/api/tf/html/msg/tfMessage.html)):
         Contains coordinate frames for moving parts.
   - /tf_static ([tf/tfMessage](http://docs.ros.org/api/tf/html/msg/tfMessage.html)):
@@ -42,15 +47,7 @@ This repository contains a collection of ROS (Robot Operating System) packages n
         Used to control the robot motors. Used internally by the nodes. Used by `move_base` and `teleop_twist_joy`.
 
 ## API
-  ####  Services
-  - /RosAria/disable_motors:
-      Disable all motors.
-  - /RosAria/enable_motors:
-      Enable all motors.
-  - /global_localization:
-      Used for robot to find his pose in global map.
-  - /set_map:
-      Define the map that move_base is going to use.
+  
   ####  Topics
   - /move_base/current_goal:
       Return the coordinates of the object.
