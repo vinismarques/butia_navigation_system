@@ -17,27 +17,27 @@ This repository contains a collection of ROS (Robot Operating System) packages n
         Driver for SICK laser range-finders.
 
 #### Topics
-  - /initialpose [geometry_msgs/PoseWithCovarianceStamped](http://docs.ros.org/api/geometry_msgs/html/msg/PoseWithCovarianceStamped.html)):
+  - /initialpose ([geometry_msgs/PoseWithCovarianceStamped](http://docs.ros.org/api/geometry_msgs/html/msg/PoseWithCovarianceStamped.html)):
         Useful for setting the start pose of the robot. Used by `amcl`.
-  - /map [nav_msgs/OccupancyGrid](http://docs.ros.org/api/nav_msgs/html/msg/OccupancyGrid.html):
+  - /map ([nav_msgs/OccupancyGrid](http://docs.ros.org/api/nav_msgs/html/msg/OccupancyGrid.html)):
         A latched topic (meaning that the data is sent once to each new subscriber) that contains information about the occupancy grid. Usually created by a SLAM mapping service and saved to disk by the `map_server`.
-  - /NavfnROS/plan [nav_msgs/Path](http://docs.ros.org/api/nav_msgs/html/msg/Path.html):
+  - /NavfnROS/plan ([nav_msgs/Path](http://docs.ros.org/api/nav_msgs/html/msg/Path.html)):
         Displays the full plan for the robot computed by the [global planner](http://wiki.ros.org/navfn).
 ##### Subscribed Topics
-  - /move_base_simple/goal [geometry_msgs/PoseStamped](http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html):
+  - /move_base_simple/goal ([geometry_msgs/PoseStamped](http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html)):
         Provides a non-action interface to `move_base` for users that don't care about tracking the execution status of their goals. Useful for setting a goal through Rviz, for example. The `move_base` package subscribes to this topic and use it to set new goals.
 ##### Action Subscribed Topics        
-  - /move_base/goal ([move_base_msgs/MoveBaseActionGoal](http://docs.ros.org/api/move_base_msgs/html/msg/MoveBaseActionGoal.html):
+  - /move_base/goal ([move_base_msgs/MoveBaseActionGoal](http://docs.ros.org/api/move_base_msgs/html/msg/MoveBaseActionGoal.html)):
         A goal for `move_base` to pursue in the world. Can be used if tracking status is needed.
-  - /move_base/current_goal [geometry_msgs/PoseStamped] (http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html):
+  - /move_base/current_goal ([geometry_msgs/PoseStamped] (http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html)):
       Displays the goal pose that the navigation stack is attempting to achieve.
-  - /move_base/cancel [actionlib_msgs/GoalID](http://docs.ros.org/api/actionlib_msgs/html/msg/GoalID.html)
+  - /move_base/cancel ([actionlib_msgs/GoalID](http://docs.ros.org/api/actionlib_msgs/html/msg/GoalID.html)):
         A request to cancel a specific goal.
-  - /move_base/feedback [move_base_msgs/MoveBaseActionFeedback](http://docs.ros.org/api/move_base_msgs/html/msg/MoveBaseActionFeedback.html):
+  - /move_base/feedback ([move_base_msgs/MoveBaseActionFeedback](http://docs.ros.org/api/move_base_msgs/html/msg/MoveBaseActionFeedback.html)):
         Feedback contains the current position of the base in the world.
   - /move_base/status ([actionlib_msgs/GoalStatusArray](http://docs.ros.org/api/actionlib_msgs/html/msg/GoalStatusArray.html)): 
         Provides status information on the goals that are sent to the `move_base` action. 
-  - /move_base/result [move_base_msgs/MoveBaseActionResult](http://docs.ros.org/api/move_base_msgs/html/msg/MoveBaseActionResult.html):
+  - /move_base/result ([move_base_msgs/MoveBaseActionResult](http://docs.ros.org/api/move_base_msgs/html/msg/MoveBaseActionResult.html)):
         Publishes only the final status of the goal. Status code 3 means it was sucessful in reaching the goal, code 4 means it was aborted due to some failure.
 #### Published Topics        
   - /cmd_vel ([geometry_msgs/Twist](http://docs.ros.org/api/geometry_msgs/html/msg/Twist.html)):
