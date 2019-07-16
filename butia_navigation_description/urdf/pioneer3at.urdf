@@ -577,7 +577,7 @@
   </link>
   <joint name="hokuyo_joint" type="fixed">
     <!--<axis xyz="0 0 1" />-->
-    <origin rpy="0 0 0" xyz="0.25 0 0.31"/>
+    <origin rpy="3.1415 0 0" xyz="0.08 0 -0.03"/>
     <parent link="base_link"/>
     <child link="hokuyo_link"/>
   </joint>
@@ -642,6 +642,11 @@
           izz="${0.0833333 * mass * (length * length + width * width)}" />
       </inertial>
     </link>
+    <joint name="sick_mount_joint" type="fixed">
+      <parent link="base_link" />
+      <child link="sick_mount_link" />
+      <origin rpy="0 0 0" xyz="0.108 0 0.28"/>
+    </joint>
     <joint name="sick_joint" type="fixed">
       <parent link="sick_mount_link" />
       <child link="sick_laser" />
