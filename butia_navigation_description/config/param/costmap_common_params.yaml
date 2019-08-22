@@ -42,6 +42,7 @@ obstacle_layer:
     raytrace_range: 4.0
     inf_is_valid: true
     
+    
   # for debugging only, let's you see the entire voxel grid
 
 #cost_scaling_factor and inflation_radius were now moved to the inflation_layer ns
