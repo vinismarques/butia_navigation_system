@@ -1,0 +1,19 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/athome/doris_ws/devel/include",
+        "/opt/ros/melodic/include",
+        "/home/athome/doris_ws/src/openslam_gmapping/include",
+        "/home/athome/doris_ws/src/turtlebot3_simulations/turtlebot3_fake/include",
+        "/home/athome/doris_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include",
+        "/usr/include"
+      ],
+      "name": "Linux"
+    }
+  ]
+}

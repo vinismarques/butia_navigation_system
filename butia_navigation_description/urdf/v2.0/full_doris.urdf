@@ -1,30 +1,27 @@
+  <?xml version="1.0"?>
   <robot name="doris">
 <!--Links declaration-->
-  <link name="base_link"/>
-  <link name="hokuyo_link"/>
-  <link name="sick_link"/>
-  <link name="torso_link"/>
-  <link name="arm_link"/>
-  <link name="head_link"/>
-<!--Joints declaration-->
-  <joint name="hokuyo_base" type="continuous">
-	<parent link="base_link"/>
-	<child link="hokuyo_link"/>
-  </joint>
-  <joint name="torso_base" type="continuous">
-	<parent link="base_link"/>
-	<child link="torso_link"/>
-  </joint>
-  <joint name="sick_torso">
-	<parent link="torso_link"/>
-	<child link="sick_link"/>
-  </joint>
-  <joint name="arm_torso">
-	<parent link="torso_link"/>
-	<child link="arm_link"/>
-  </joint>
-  <joint name="head_torso">
-	<parent link="torso_link"/>
-	<child link="head_link"/>
-  </joint>
-
+  <<link name="base_link">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+    <visual name="">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <box size="0.0 0.0 0.0"/>
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+        <texture filename=""/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <box size="0.0 0.0 0.0"/>
+      </geometry>
+    </collision>
+  </link>
+  </robot>

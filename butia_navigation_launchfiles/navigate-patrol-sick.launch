@@ -9,6 +9,7 @@
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_navigation_launchfiles)/slam-pioneer3at.rviz" required="true" />
 
+
   <!-- Start map_server -->
   <arg name="map" default="$(find butia_navigation_gazebo)/maps/fbol_c3_nautec_sick.yaml" />
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)" output="screen" />
