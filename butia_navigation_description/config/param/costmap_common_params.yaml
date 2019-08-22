@@ -28,19 +28,7 @@ obstacle_layer:
     clearing: true  # whether the sensor will be used to clear obstacle information from the costmap
     min_obstacle_height: 0.35
     max_obstacle_height: 3.00
-    observation_persistence: 0.0  # parametros sendo testados
-    raytrace_range: 4.0
-    inf_is_valid: true
-  ground_scan:
-    data_type: LaserScan
-    topic: scan2
-    marking: true   # whether the sensor will be used to add obstacle information to the costmap
-    clearing: true  # whether the sensor will be used to clear obstacle information from the costmap
-    min_obstacle_height: 0.0
-    max_obstacle_height: 0.35
-    observation_persistence: 0.0  # parametros sendo testados
-    raytrace_range: 4.0
-    inf_is_valid: true
+
     
   # for debugging only, let's you see the entire voxel grid
 
