@@ -20,7 +20,7 @@ obstacle_layer:
   obstacle_range: 3.5
   raytrace_range: 4.0
   publish_voxel_map: false
-  observation_sources:  scan ground_scan
+  observation_sources:  body_scan ground_scan
   body_scan:
     data_type: LaserScan
     topic: scan
