@@ -15,7 +15,8 @@
 
   <!-- Launches laser node -->
   <include file="$(find butia_navigation_description)/config/sick_lms_1xx.launch.xml"/>
-
+  <include file="$(find butia_navigation_description)/config/urg.launch.xml"/>
+  
   <!-- Launches rosaria -->
   <include file="$(find butia_navigation_description)/config/rosaria.launch.xml"/>
 
