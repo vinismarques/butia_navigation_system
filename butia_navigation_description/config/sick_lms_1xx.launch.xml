@@ -5,7 +5,9 @@
   <node pkg="tf" type="static_transform_publisher" name="sick_broadcaster" args="0.108 0 0.68 0 0 0 1 base_link sick_link 100" />
   <arg name="hostname" default="192.168.0.127" />
     <!-- robot_description and robot_state_publisher hier evtl. einbauen  -->
+
   <node name="sick_lms_1xx" pkg="sick_scan" type="sick_generic_caller" respawn="false" output="screen">
+    
     <!-- default values: -->
     <!--
       <param name="intensity" type="bool" value="True" />
@@ -28,5 +30,4 @@
 	<param name="timelimit" type="int" value="5" />
 
     
-  </node>
 </launch>
