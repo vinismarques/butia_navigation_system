@@ -2,7 +2,7 @@ max_obstacle_height: 1.9  # assume something like an arm is mounted on top of th
 
 # Obstacle Cost Shaping (http://wiki.ros.org/costmap_2d/hydro/inflation)
 # robot_radius: 0.35  # distance a circular robot should be clear of the obstacle (kobuki: 0.18)
-footprint: [[0.75, 0.25], [0.30, -0.25], [-0.30, -0.25], [-0.30, 0.25], [0.30, 0.25]]   # if the robot is not circular
+footprint: [[0.75, 0.0], [0.30, -0.25], [-0.30, -0.25], [-0.30, 0.25], [0.30, 0.25]]   # if the robot is not circular
 
 map_type: voxel
 
@@ -18,7 +18,7 @@ obstacle_layer:
   track_unknown_space:  true    # true needed for disabling global path planning through unknown space
   footprint_clearing_enabled: true
   obstacle_range: 3.5
-  raytrace_range: 4.0
+  raytrace_range: 8.0
   publish_voxel_map: false
   observation_sources:  body_scan ground_scan
   body_scan:
@@ -26,10 +26,10 @@ obstacle_layer:
     topic: scan
     marking: true   # whether the sensor will be used to add obstacle information to the costmap
     clearing: true  # whether the sensor will be used to clear obstacle information from the costmap
-    min_obstacle_height: 0.0
+    min_obstacle_height: 0.68
     max_obstacle_height: 1.9
     observation_persistence: 0.0  # parametros sendo testados
-    raytrace_range: 4.0
+    raytrace_range: 8.0
     inf_is_valid: true
   ground_scan:
     data_type: LaserScan
@@ -37,17 +37,17 @@ obstacle_layer:
     marking: true   # whether the sensor will be used to add obstacle information to the costmap
     clearing: true  # whether the sensor will be used to clear obstacle information from the costmap
     min_obstacle_height: 0.0
-    max_obstacle_height: 1.9
+    max_obstacle_height: 0.68
     observation_persistence: 0.0  # parametros sendo testados
     raytrace_range: 4.0
     inf_is_valid: true  
   # for debugging only, let's you see the entire voxel grid
-  
+
 
 #cost_scaling_factor and inflation_radius were now moved to the inflation_layer ns
 inflation_layer:
   enabled:              true
-  cost_scaling_factor:  2.58  # exponential rate at which the obstacle cost drops off (default: 10)
+  cost_scaling_factor:  10  # exponential rate at which the obstacle cost drops off (default: 10)
   inflation_radius:     1.75  # max. distance from an obstacle at which costs are incurred for planning paths. (default: 0.4)
 
 static_layer:
