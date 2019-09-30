@@ -644,15 +644,15 @@
     <joint name="sick_mount_joint" type="fixed">
       <parent link="base_link" />
       <child link="sick_mount_link" />
-      <origin rpy="0 0 0" xyz="0.108 0 0.28"/>
+      <origin rpy="0 0 0" xyz="0.2945 0 0.638"/>
     </joint>
     <joint name="sick_joint" type="fixed">
       <parent link="sick_mount_link" />
-      <child link="sick_laser" />
-      <origin rpy="0 0 0" xyz="0.0549 0 0.0367"/>
+      <child link="sick_link" />
+      <origin rpy="0 0 0" xyz="0.0549 0 0.12"/>
     </joint>
 
-    <link name="sick_laser">
+    <link name="sick_link">
       <inertial>
         <mass value="0.001" />
         <origin xyz="0 0 0" />
