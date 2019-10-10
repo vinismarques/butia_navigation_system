@@ -6,6 +6,7 @@
   <param name="robot_description" textfile="$(find butia_navigation_description)/urdf/$(arg urdf)" />
   <!-- <param name="use_gui" value="$(arg joint_state_gui)"/> -->
   <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen" /> -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_navigation_launchfiles)/slam-pioneer3at.rviz" required="true"/>
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
   
   <!-- Launches laser node -->
