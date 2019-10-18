@@ -10,7 +10,7 @@
     <param name="linearUpdate" value="0.1"/>
     <param name="angularUpdate" value="0.1"/>
     <!-- <param name="temporalUpdate" value="3"/> -->
-    <param name="maxRange" value="4.0"/> <!-- reduces random spikes -->
+    <param name="maxRange" value="12.0"/> <!-- reduces random spikes -->
     <!-- <param name="minimumScore" value="50"/> -->
 
     <!-- <remap from="scan" to="$(arg scan_topic)"/> -->
