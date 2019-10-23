@@ -3,7 +3,7 @@ default: check
 
 #xacro_files=$(shell find . -name \*.urdf.xacro)
 xacro_files=\
-  pioneer3at.urdf.xacro
+  sick_lms1xx.urdf.xacro
 
 urdf_files=$(patsubst %.urdf.xacro,%.urdf,$(xacro_files))
 sdf_files=$(patsubst %.urdf,../../gazebo/%.sdf,$(urdf_files))
