@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
 <!-- FOR FUTURE USE. NOT SUPPORTED NOW. DO NOT USE IT. -->
 <launch>
-  <arg name="hostname" default="169.254.147.28" />
-    <!-- Sick_link declaration-->
-  <node pkg="tf" type="static_transform_publisher" name="sick_broadcaster" args="0.108 0 0.68 0 0 0 1 base_link sick_link 100" />
-
+  <!-- Sick_link declaration-->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="sick_broadcaster" args="0.108 0 0.68 0 0 0 1 base_link sick_link 100" /> -->
+  <arg name="hostname" default="192.168.0.127" />
     <!-- robot_description and robot_state_publisher hier evtl. einbauen  -->
 
   <node name="sick_lms_1xx" pkg="sick_scan" type="sick_generic_caller" respawn="false" output="screen">
@@ -22,10 +21,7 @@
 	<param name="min_ang" type="double" value="-1.658" />
 	<param name="max_ang" type="double" value="1.658" />
     -->
-
-
       <param name="frame_id" type="str" value="sick_link" />
-
     	<param name="use_binary_protocol" type="bool" value="False" />
 	<param name="scanner_type" type="string" value="sick_lms_1xx"/>
 	<param name="range_max" type="double" value="25.0" />
@@ -33,5 +29,5 @@
 	<param name="port" type="string" value="2111" />
 	<param name="timelimit" type="int" value="5" />
 
-    
+</node>    
 </launch>

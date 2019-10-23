@@ -5,3 +5,8 @@ project(butia_navigation_launchfiles)
 #   launch 
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
+
+install(PROGRAMS
+  nodes/enable_motors_r.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
