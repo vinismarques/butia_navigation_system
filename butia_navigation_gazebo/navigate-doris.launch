@@ -21,7 +21,7 @@
     <arg name="map" default="$(find butia_navigation_gazebo)/maps/playground.yaml" />
   -->
     <arg name="world" default="worlds/willowgarage.world" />
-    <arg name="map" default="$(find butia_navigation_gazebo)/maps/test_environment.yaml" />
+    <arg name="map" default="$(find butia_navigation_gazebo)/maps/willow.yaml" />
 
     <!-- Set command arguments -->
     <group if="$(arg use_sim_time)">
