@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
-    <env name="GAZEBO_MODEL_PATH" value="$GAZEBO_MODEL_PATH:$(find butia_navigation_gazebo)/models" />
-    <env name="GAZEBO_RESOURCE_PATH" value="$GAZEBO_RESOURCE_PATH:$(find butia_navigation_gazebo)/models" />
+    <!--env name="GAZEBO_MODEL_PATH" value="$GAZEBO_MODEL_PATH:$(find butia_navigation_gazebo)/models" />
+    <env name="GAZEBO_RESOURCE_PATH" value="$GAZEBO_RESOURCE_PATH:$(find butia_navigation_gazebo)/models" /-->
 
     <arg name="paused" default="false" />
     <arg name="use_sim_time" default="true" />
