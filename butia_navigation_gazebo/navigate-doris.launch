@@ -60,15 +60,11 @@
       </include>
     </group>
 
-
-
     <!-- Start map_server -->
     <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)" />
 
-
     <!-- Localization -->
     <include file="$(find butia_navigation_description)/config/amcl.launch.xml" />
-
 
     <!-- Move base -->
     <arg name="cmd_vel" default="cmd_vel" />
@@ -78,7 +74,6 @@
         <arg name="cmd_vel_topic" value="$(arg cmd_vel)" />
         <arg name="odom_topic" value="$(arg odom)" />
     </include>
-
 
     <!-- RVIZ to view the visualization -->
     <node name="RVIZ" pkg="rviz" type="rviz" args=" -d $(find butia_navigation_gazebo)/navigate-pioneer3at.rviz" required="true" />
