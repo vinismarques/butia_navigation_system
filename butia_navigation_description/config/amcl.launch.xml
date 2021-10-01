@@ -9,6 +9,7 @@
     <param name="odom_alpha2" value="0.2"/>
     <param name="odom_alpha3" value="0.8"/>
     <param name="odom_alpha4" value="0.1"/>
+    <param name="initial_pose_a" value="1.570"/>
     <param name="resample_interval" value="1"/>
 
     <remap from="scan" to="$(arg scan_topic)"/>
