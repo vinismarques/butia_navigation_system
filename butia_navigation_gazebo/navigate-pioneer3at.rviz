@@ -207,8 +207,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 0.4800598919391632
-        Min Value: 0.47992753982543945
+        Max Value: 0.4805399477481842
+        Min Value: 0.4782131016254425
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -415,12 +415,6 @@ Visualization Manager:
           Value: true
         shoulder_link:
           Value: true
-        target/delivery:
-          Value: true
-        target/shelf_detect:
-          Value: true
-        target/shelf_pick:
-          Value: true
         yaw_link:
           Value: true
       Marker Alpha: 1
@@ -438,7 +432,15 @@ Visualization Manager:
                   arm_base_link:
                     shoulder_link:
                       forearm_link:
-                        {}
+                        elbow_link:
+                          roll_link:
+                            yaw_link:
+                              roll_2_link:
+                                gripper_link:
+                                  left_finger_link:
+                                    {}
+                                  right_finger_link:
+                                    {}
                   head_link:
                     {}
                   kinect2_link:
@@ -460,12 +462,6 @@ Visualization Manager:
                   {}
                 right_wheel_link:
                   {}
-          target/delivery:
-            {}
-          target/shelf_detect:
-            {}
-          target/shelf_pick:
-            {}
       Update Interval: 0
       Value: true
   Enabled: true
