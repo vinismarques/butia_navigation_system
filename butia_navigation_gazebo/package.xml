@@ -13,6 +13,8 @@
   <depend>gazebo_msgs</depend>
   <depend>gazebo_plugins</depend>
   <depend>gazebo_ros</depend>
+  <run_depend>butia_navigation_description</run_depend>
+  <run_depend>butia_description</run_depend>
 
   <export>
     <gazebo_ros gazebo_model_path="${prefix}/models" />
