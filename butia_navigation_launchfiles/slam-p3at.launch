@@ -7,7 +7,7 @@
   <!-- <param name="use_gui" value="$(arg joint_state_gui)"/> -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_navigation_launchfiles)/slam-pioneer3at.rviz" required="true" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_navigation_launchfiles)/doris_navigation.rviz" required="true" />
   
   <!-- Launches laser node -->
   <include file="$(find butia_navigation_description)/config/urg.launch.xml"/>
