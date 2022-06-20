@@ -47,7 +47,7 @@
           <node name="gazebo_gui" pkg="gazebo_ros" type="gzclient" respawn="false" output="screen" />
       </group>
       <!-- Spawn robot -->
-      <arg name="urdf" default="$(find doris_description)/urdf/doris_description.urdf.xacro" />
+      <arg name="urdf" default="$(find doris_description)/urdf/doris_no_arm.urdf.xacro" />
       <arg name="x" default="0" />
       <arg name="y" default="0" />
       <arg name="z" default="0" />
