@@ -11,7 +11,7 @@
 
 
   <!-- Start map_server -->
-  <arg name="map" default="$(find butia_navigation_gazebo)/maps/c3_segundo_andar.yaml" />
+  <arg name="map" default="$(find butia_navigation_gazebo)/maps/c3_2022.yaml" />
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)" output="screen" />
 
   <!-- Launches laser node -->
