@@ -5,6 +5,7 @@
     <param name="DriftFactor" value="0"/>
     <param name="RevCount" value="30700"/>
     <param name="TicksMM" value="192"/>
+    <param name="base_link_frame" value="base_footprint"/>
   </node>
   
 </launch>
