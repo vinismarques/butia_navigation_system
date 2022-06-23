@@ -14,15 +14,12 @@
   <depend>sensor_msgs</depend>
   <depend>urdf</depend>
   <depend>std_msgs</depend>
-  <run_depend>move_base</run_depend>
-  <run_depend>geometry_msgs</run_depend>
-  <run_depend>robot_state_publisher<run_depend>
-  <run_depend>amcl</run_depend>
-  <run_depend>map_server</run_depend>
-  <run_depend>dwa_local_planner</run_depend>
-  <run_depend>gmapping</run_depend>
-  <run_depend>rosaria</run_depend>
-  <run_depend>urg_nome</run_depend>
-  <run_depend>sick_scan</run_depend>
+  <depend>move_base</depend>
+  <depend>geometry_msgs</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>amcl</depend>
+  <depend>map_server</depend>
+  <depend>dwa_local_planner</depend>
+  <depend>gmapping</depend>
 
 </package>
