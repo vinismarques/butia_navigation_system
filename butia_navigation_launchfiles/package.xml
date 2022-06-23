@@ -13,6 +13,8 @@
   <build_depend>rospy</build_depend>
   <build_depend>catkin</build_depend>
   <build_export_depend>rospy</build_export_depend>
-  <exec_depend>rospy</exec_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>butia_navigation_description</run_depend>
+  <run_depend>butia_description</run_depend>
 
 </package>
