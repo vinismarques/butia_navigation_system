@@ -3,10 +3,6 @@ project(butia_navigation_launchfiles)
 
 find_package(catkin REQUIRED)
 
-catkin_package(
-  INCLUDE_DIRS nodes
-)
-
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
@@ -15,8 +11,3 @@ include_directories(
 #   launch 
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
-
-install(PROGRAMS
-  nodes/enable_motors_r.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
