@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<launch>
+  <!-- Launches rviz with the robot model -->
+  <!-- arg name="urdf" default="pioneer3at.urdf" /-->
+  <arg name="urdf" default="doris_no_arm.urdf.xacro" />
+
+  <!-- <arg name="joint_state_gui" default="true" /> -->
+  <param name="robot_description" command="xacro $(find doris_description)/urdf/$(arg urdf)" />
+  <!-- <param name="use_gui" value="$(arg joint_state_gui)"/> -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_navigation_launchfiles)/doris_navigation.rviz" required="true"/>
+
+  <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch"/>
+
+</launch>
