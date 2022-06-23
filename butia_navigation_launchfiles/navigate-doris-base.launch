@@ -27,4 +27,6 @@
     <arg name="odom_topic" value="$(arg odom)"/>
   </include>
 
+  <node name="emergency_recovery_node" pkg="butia_navigation_scripts" type="emergency_recovery_node.py" output="screen" />
+
 </launch>
