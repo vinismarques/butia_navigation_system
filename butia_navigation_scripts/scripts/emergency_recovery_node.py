@@ -20,7 +20,7 @@ if __name__=='__main__':
             rospy.wait_for_service('/RosAria/enable_motors')
             try:
                 enable_motors_serv = rospy.ServiceProxy('/RosAria/enable_motors', Empty)
-                resp1 = enable_motors_serv(Empty())
+                resp1 = enable_motors_serv()
             except rospy.ServiceException as e:
                 print("Service call failed: %s"%e)
         r.sleep()
