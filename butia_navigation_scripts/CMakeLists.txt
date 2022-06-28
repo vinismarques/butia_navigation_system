@@ -192,6 +192,7 @@ include_directories(
 
 install(FILES
   scripts/emergency_recovery_node.py
+  scripts/verify_front_node.py
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
